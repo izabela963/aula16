@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org /1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>exemplo</title>
+</h:head>
+
+<h:body>
+	<h:messages />
+	<h:form>
+		<h:outputLabel value="Usuario:" for="campo-usuario" />
+		<h:inputText value="#{autenticacaoBean.usuario}" id="campo-usuario" />
+
+		<h:outputLabel value="Senha:" for="campo-senha" />
+		<h:inputSecret value="#{autenticacaoBean.senha}" id="campo-senha" />
+		<h:commandButton value="Entrar" action="#{autenticacaoBean.autentica}" />
+		
+		<h:form>
+    <p:growl id="messages" />
+ 	<!--  EXEMPLO PRIMEFACES
+    <p:splitButton value="Save" actionListener="#{buttonView.save}" update="messages" icon="ui-icon-disk">
+        <p:menuitem value="Update" actionListener="#{buttonView.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />
+        <p:menuitem value="Delete" actionListener="#{buttonView.delete}" ajax="false" icon="ui-icon-close" />
+        <p:separator />
+        <p:menuitem value="Homepage" url="http://www.primefaces.org" icon="ui-icon-extlink" />
+    </p:splitButton>
+    
+     -->
+</h:form>
+	</h:form>
+</h:body>
+</html>
